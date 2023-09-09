@@ -1,0 +1,52 @@
+.path{
+    width: 100vw;
+    margin-top: 50px;
+    position: relative;
+}
+.path .box{
+    width: 100vw;
+    min-height: calc(100vh - 50px);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.path > .title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Josefin Sans",sans-serif !important;
+    font-weight: 900;
+    color: var(--color);
+
+}
+.box .images{
+    width: 50%;
+    min-width: 275px;
+    max-height: 80%;
+}
+.box .text{
+    width: 50%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--bg-color);
+    color: var(--color);
+    padding: 20px;
+}
+.box .title{
+    font-size: 35px;
+}
+.box .description{
+    font-size: 15px;
+
+}

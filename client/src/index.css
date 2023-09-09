@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Rakkas&display=swap');
+:root{
+  --blue:  #0096D6;
+  --dark-blue:  #006895;
+  --green:  #00A699;
+  --dark-green: #1DB954;
+  --turbo: #F3CF18;
+  --gray: #737373;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+  outline: none;
+}
+html,
+body,
+#root{
+  width:100%;
+  height: 100%;
+  overflow-x:hidden;
+}
+::-webkit-scrollbar {
+  width: .7vmin;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 500px;
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.active::after{
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  background-color: var(--blue);
+  border-radius: 5px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: var(--blue);
+}
+input:in-range{
+  border: 1px solid var(--dark-green);
+}
+input:out-of-range{
+  border: 1px solid rgb(200, 0, 0);
+}

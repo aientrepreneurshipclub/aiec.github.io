@@ -1,0 +1,30 @@
+.card{
+    width: 250px;
+    position: relative;
+    background-color: var(--green);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin: 10px;
+}
+.image{
+    width: 100%;
+    object-fit: contain;
+    margin: 0;
+}
+.info{
+    width: 100%;
+    margin: -5px 0 5px 0;
+    color: rgb(255, 255, 255);
+}
+.info:hover{
+    color: rgb(200, 200, 200);
+}
+.name{
+    padding: 0 13px;
+
+}
+.date{
+    padding: 0 13px;
+}

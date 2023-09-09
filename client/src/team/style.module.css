@@ -1,0 +1,55 @@
+.members{
+    width: 100vw;
+    margin-top: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: var(--bg-color);
+    color: var(--color);
+}
+.member{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.image{
+    width: 150px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: none;
+    border-radius: 50%;
+    border: solid 5px var(--green);
+    box-shadow: var(--shadow);
+}
+.info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.name{
+    font-family: "Josefin Sans",sans-serif !important;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+
+}
+.position{
+    font-family: "Josefin Sans",sans-serif !important;
+    font-weight: 500;
+    font-size: 25px !important;
+    text-align: center;
+
+}
+.community{
+    font-family: "Josefin Sans",sans-serif !important;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center; 
+}

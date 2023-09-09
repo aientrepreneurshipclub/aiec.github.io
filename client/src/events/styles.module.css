@@ -1,0 +1,8 @@
+.eventsContainer{
+    width: 100%;
+    background-color: var(--bg-color);
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}

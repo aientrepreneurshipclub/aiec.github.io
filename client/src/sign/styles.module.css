@@ -1,0 +1,249 @@
+.container{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(40, 40, 40,.7);
+}
+.sign{
+  width: 80%;
+  min-width: 200px;
+  max-width: 500px;
+  height: 90%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  border-radius: 10px 10px 0 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--color);
+  padding:5px 15px;
+  overflow: scroll;
+  box-shadow: var(--shadow);
+  animation: show .2s linear 0s 1 ;
+}
+@keyframes show {
+  0%{
+    height: 0%;
+    overflow: hidden;
+  }
+  100%{
+    height: 90%;
+    overflow: hidden;
+  }
+}
+.close{
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--blue);
+  color: rgb(255, 255, 255);
+  z-index: 11111111;
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vmin;
+  font-weight: 600;
+  top:2.5vmin;
+  right: 2.5vmin;
+  cursor: pointer;
+}
+.signUp{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.signUp .inputBox {
+  width: 98%;
+}
+.signUp img {
+  width: 100%;
+  object-fit: contain;
+}
+.container header {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+}
+.signIn .inputBox {
+  width: 100%;
+}
+
+.inputBox input{
+  position: relative;
+  height: 30px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  border: solid 1px var(--color);
+  border-radius: 6px;
+  padding: 0 5%;
+  cursor: pointer;
+}
+.inputBox input:focus {
+  border: solid 1px var(--blue);
+}
+.signIn .column {
+  display: grid;
+  grid-template-columns: 47% 47%;
+  gap: 15px;
+}
+.genderBox h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.signIn :where(.genderOption, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.signIn .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: var(--blue);
+}
+.signIn :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.selectBox select {
+  height: 30px;
+  width: 100%;
+  outline: none;
+  border: solid 1px var(--color);
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.buttons{
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 15px;
+  padding: 10px 0;
+}
+input[type="submit"], 
+.signIn button,
+.signUp button{
+  height: 45px;
+  width: 80%;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--blue);
+}
+input[type="submit"]:hover {
+  filter:contrast( 100px )  ;
+}
+.signIn button{
+  background-color: var(--green);
+}
+.signUp input[type="submit"]{
+  background-color: var(--green);
+}
+.signUp button{
+  background-color: var(--blue);
+}
+.teamContainer{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(40, 40, 40,.7);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form.team{
+  width: 60%;
+  min-width: 200px;
+  max-width: 400px;
+  background-color: var(--bg-color);
+  color: var(--color);
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+}
+form.team .close,
+form.team .Aclose{
+  position: absolute;
+  border-radius: 5px;
+  top:20px;
+  width:min-content;
+  padding: 5px;
+  background-color: var(--blue);
+  color: #ffffff;
+  cursor: pointer;
+}
+.close{
+  right: 20px !important;
+}
+.Aclose{
+  left: 20px !important;
+}
+form.team .inputBox:nth-child(2){
+  margin-top: 12.5px;
+}
+form.team input[type="submit"], 
+form.team .update{
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  background-color: var(--green);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 4vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.members{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.member{
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  align-items: center;
+  padding: 1px 5px;
+  background-color: var(--green);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 100;
+}
+.delete{
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  .signIn .column {
+    grid-template-columns: 100%;
+    flex-wrap: wrap;
+  }
+  .signIn :where(.genderOption, .gender) {
+    row-gap: 15px;
+  }
+}

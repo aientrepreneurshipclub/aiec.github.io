@@ -1,0 +1,225 @@
+.home{
+    width: 100vw;
+    margin-top: 50px;
+}
+.home .interface{
+    width: 100vw;
+    height: calc(100vh - 50px);
+    position: relative;
+    background: linear-gradient(rgb(0, 0, 0,.85),rgb(0, 0, 0,.5));  
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.home .interface a{
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 100px);
+    width: 200px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    animation: move 2s linear 0s infinite ;
+
+}
+@keyframes move {
+    0%{bottom: -30px;}
+    50%{bottom: -150px;}
+    100%{bottom: -30px;} 
+}
+.home .interface a span{
+    background-color: transparent;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    width: 200px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.interface .image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: -1;
+    box-shadow: var(--shadow);
+}
+.interface .subtitle{
+    color: rgb(255, 255, 255);
+    font-size: 6vmin;
+}
+.interface .title{
+    color: rgb(255, 255, 255);
+    color: var(--turbo);
+    font-size: 8vmin;
+
+}
+.interface .description{
+    color: rgb(255, 255, 255);
+    font-size: 4vmin;
+}
+.home .box{
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px ;
+}
+.box .image{
+    width: 50%;
+    min-width: 275px;
+    border-radius: 20px;
+    object-fit: contain;
+    box-shadow: var(--shadow);
+}
+.box .text{
+    width: 50%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--bg-color);
+    color: var(--color);
+    padding: 20px;
+}
+.box .title{
+    font-size: 35px;
+}
+.box .description{
+    font-size: 15px;
+
+}
+.home .boxs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 20px 0;
+}
+.boxs .minibox{
+    width: 250px;
+    max-height: 300px;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+}
+.minibox .image{
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 20px 20px 0 0;
+}
+.minibox .description{
+    padding: 20px;
+    font-family: "Josefin Sans",sans-serif !important;
+    font-weight: 700;
+    text-align: center;
+}
+.dataBoxs{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+.dataBox{
+    width: 200px;
+    aspect-ratio: 1;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0 50px 0;
+}
+.dataBox .number{
+    font-family: "Josefin Sans",sans-serif !important;
+    font-weight: 700;
+    font-size: 40px;
+    margin: 20px;
+}
+.dataBox .description{
+    font-family: "Josefin Sans",sans-serif !important;
+    font-weight: 600;
+    font-size: 23px;
+    text-align: center;
+}
+.home .joinUs{
+    width: 100%;
+    background-color: var(--green);
+    min-height: calc(100% -50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.joinUs > .title{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Josefin Sans",sans-serif !important;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    margin:5px ;
+
+}
+.joinUs .data{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* gap: 10px; */
+
+}
+.data .section{
+    width: 20%;
+    min-width: 200px;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: var(--shadow);
+    background-color: rgb(255, 255, 255);
+    color: #000;
+} 
+.section .image{
+    width: 100%;
+    object-fit: contain;
+} 
+.section .title{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Josefin Sans",sans-serif !important;
+    font-weight: 800;
+    color: #000;
+}
+.section .description{
+    padding: 0 20px;
+    color: #000;
+    text-align: center;
+}
+
+
+
+
+
+
+

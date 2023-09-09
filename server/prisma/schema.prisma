@@ -1,0 +1,94 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/client"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+type Language {
+  arabic  String
+  english String
+}
+
+type location {
+  lat Float
+  lng Float
+}
+
+type Collaborator {
+  type     Language
+  name     Language?
+  bio      Language?
+  image    String
+  linkedin String
+}
+
+type Name {
+  frist String
+  last  String
+}
+
+model Event {
+  id            String         @id @default(auto()) @map("_id") @db.ObjectId
+  name          Language
+  description   Language
+  withTeams     Boolean        @default(false)
+  date          DateTime
+  location      location
+  address       Language
+  upcoming      Boolean
+  images        String[]
+  locationImage String
+  timeline      String
+  collaborators Collaborator[]
+  attendees     Attendee[]     @relation(fields: [attendeeIDs], references: [id])
+  attendeeIDs   String[]       @db.ObjectId
+  teams         Team[]
+}
+
+model Attendee {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        Name
+  email       String   @unique
+  password    String
+  phone       String   @unique
+  education   String
+  gender      String
+  image       String
+  governorate String
+  birthday    DateTime
+  activation  Boolean  @default(false)
+  events      Event[]  @relation(fields: [eventIDs], references: [id])
+  eventIDs    String[] @db.ObjectId
+  Team        Team[]   @relation(fields: [teamIDs], references: [id])
+  teamIDs     String[] @db.ObjectId
+  member      Member?
+}
+
+model Team {
+  id       String     @id @default(auto()) @map("_id") @db.ObjectId
+  name     String
+  event    Event      @relation(fields: [eventId], references: [id])
+  eventId  String     @db.ObjectId
+  attendee Attendee[] @relation(fields: [members], references: [id])
+  members  String[]   @db.ObjectId
+  proposal String
+}
+
+model HearAboutUs {
+  id         String @id @default(auto()) @map("_id") @db.ObjectId
+  attendeeId String @db.ObjectId
+  evevntId   String @db.ObjectId
+  answer     String
+}
+
+model Member {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  attendee      Attendee @relation(fields: [attendeeEmail], references: [email])
+  attendeeEmail String   @unique
+  position      Language
+  community     String
+}

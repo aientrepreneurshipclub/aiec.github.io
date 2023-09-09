@@ -1,0 +1,18 @@
+.container{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+.image{
+    width: 100px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    border-radius: 50%;
+    border: solid 3px var(--green);
+    cursor: pointer;
+}
+.input{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
